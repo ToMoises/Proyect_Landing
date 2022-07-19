@@ -48,7 +48,7 @@ a:hover {
 }
 .cont-lista a{
     text-align: center;
-    line-height: 45%;
+    line-height: 25px;
 }
 .cont-sesion {
     float: left;
@@ -58,7 +58,7 @@ a:hover {
 }
 .cont-sesion a{
     text-align: center;
-    line-height: 45%;
+    line-height: 25px;
 }
 }
 
