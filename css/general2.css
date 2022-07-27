@@ -1,0 +1,137 @@
+.contenedor{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header "
+                         "jumbutron jumbutron2"
+                         "tarjetas tarjetas "
+                         "jumbutron3 jumbutron4"
+                         "footer footer";
+}
+.contenedor .header{
+    background: #111827;
+    color: white;
+    grid-area: header;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "image nabvar nabvar" ;
+
+}
+.image{
+    float: left;
+   margin: 10px;
+   grid-area: image;
+   display: flex;
+   align-items: center;
+
+}
+.header .nabvar{
+    float: left;
+    grid-area: nabvar;
+    margin: 10px;
+}
+
+.nabvar .derecha{
+    float: right;
+}
+
+.nabvar ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #111827;
+}
+
+.nabvar li {
+    float: left;
+  }
+  
+.nabvar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+.nabvar li a:hover {
+    color: gray;
+  }
+
+
+.contenedor .jumbutron{
+    background: greenyellow;
+    padding: 25px;
+    grid-area: jumbutron;
+}
+
+.contenedor .jumbutron2{
+    background: rgb(95, 189, 233);
+    grid-area: jumbutron2;
+}
+
+.contenedor .jumbutron2 img{
+    width: 80%;
+    height: 500px;
+    }
+    
+
+.contenedor .tarjetas{
+    background: wheat;
+    grid-area: tarjetas;
+    padding: 20px;
+}
+.contenedor .jumbutron3{
+    background: rgb(95, 189, 233);
+    grid-area: jumbutron3;
+}
+
+.contenedor .jumbutron3 img{
+    width: 80%;
+    height: 500px;
+    }
+
+
+.contenedor .jumbutron4{
+    background: greenyellow;
+    padding: 25px;
+    grid-area: jumbutron4;
+}
+
+@media screen and (max-width: 724px) {
+    .contenedor{
+        grid-template-areas: "header header"
+                             "jumbutron jumbutron"
+                             "jumbutron2 jumbutron2"
+                             "tarjetas tarjetas "
+                             "jumbutron3 jumbutron3"
+                             "jumbutron4 jumbutron4"
+                             "footer footer";
+    }
+
+    .contenedor .header{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "image image"
+                             "nabvar nabvar" ;
+    
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+       grid-area: image;
+    }
+    .nabvar{
+        display: flex;
+        grid-area: nabvar;
+        justify-content: center;
+    }
+}
+
+
